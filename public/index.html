@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Entry Test</title>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Load All the entries...
+      $.ajax({
+        url: '/entries/all',
+        method: 'GET'
+      }).done(function (data) {
+        data.forEach(function (d) {
+          $('#entries-index').append("<p><strong>" + d.title + "</strong></p>");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="entries-index">
+    <h2>All Entries</h2>
+  </div>
+</body>
+</html>
