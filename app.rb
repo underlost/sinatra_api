@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
+require 'dm-is-reflective'
 require "ruby_pagination_logic"
 
 #Connect to Existing Heroku database
